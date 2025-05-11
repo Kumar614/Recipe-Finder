@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recipe Finder</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-container">
+    <header>
+      <h1>Recipe Finder</h1>
+      <form id="search-form" aria-label="Search for recipes">
+        <input type="text" id="search-input" placeholder="Search for recipes (e.g., pasta, chicken)" required aria-label="Recipe search input" />
+        <button type="submit" aria-label="Search recipes">Search</button>
+      </form>
+    </header>
+    <main>
+      <section id="results" aria-live="polite" aria-atomic="true"></section>
+    </main>
+
+    <div id="recipe-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal-content">
+        <button class="close-btn" aria-label="Close details">&times;</button>
+        <h2 id="modal-title"></h2>
+        <img id="modal-image" alt="" />
+        <h3>Ingredients</h3>
+        <ul id="modal-ingredients"></ul>
+        <h3>Instructions</h3>
+        <div id="modal-instructions"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
